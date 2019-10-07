@@ -7,16 +7,24 @@ void setup()
 {
   size(300,300);
   background(0,0,0);
-  strokeWeight(4);
+  strokeWeight(1);
 }
 void draw()
 {
-  stroke((int)(Math.random() * 254 + 1),(int)(Math.random() * 254 + 1),(int)(Math.random() * 254 + 1));
-  while(endX > 300){
-    endX = startX + Math.random(0, 9);
+  //stroke((int)(Math.random() * 254 + 1),(int)(Math.random() * 254 + 1),(int)(Math.random() * 254 + 1));
+  stroke(255, 255, 255);
+  while(endX < 300){
+    endX = startX + (int)(Math.random() * 9);
+    endY = startY + (int)(Math.random() * 18 - 9);
+    line(startX, startY, endX, endY);
+    startX = endX;
+    startY = endY;
   }
 }
 void mousePressed()
 {
-
+  startX = 0;
+  startY = 150;
+  endX = 0;
+  endY = 150;
 }
