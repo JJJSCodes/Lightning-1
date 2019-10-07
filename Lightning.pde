@@ -11,8 +11,7 @@ void setup()
 }
 void draw()
 {
-  //stroke((int)(Math.random() * 254 + 1),(int)(Math.random() * 254 + 1),(int)(Math.random() * 254 + 1));
-  stroke(255, 255, 255);
+  stroke((int)(Math.random() * 254 + 1),(int)(Math.random() * 254 + 1),(int)(Math.random() * 254 + 1));
   while(endX < 300){
     endX = startX + (int)(Math.random() * 9);
     endY = startY + (int)(Math.random() * 18 - 9);
